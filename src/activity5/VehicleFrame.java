@@ -23,8 +23,8 @@ public class VehicleFrame implements Chassis {
 
     public String toString() {
         return
-                "Chassis:" + chassis + "\n" +
-                        "Vehicle Frame" + vehicleFrameType;
+                "Chassis: " + chassis + "\n" +
+                        "Vehicle Frame: " + vehicleFrameType;
 
     }
 
