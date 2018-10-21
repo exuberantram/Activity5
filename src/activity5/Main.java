@@ -6,52 +6,95 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Write a static main method that creates two objects,
-        // one with the default constructor and the
-        // other with the constructor with parameters.
+        //testVehicleChassis();
+        //testVehicleFrame();
+        //testManufacturedEngine();
+        //testFeatures();
+        //testVehicle();
+        testCar();
+    }
+
+    public static void testVehicleChassis() {
+        // Creates two objects, one with the default constructor
+        // and the other with the constructor with parameters.
         // Give sample data for the parameters.
 
-//        VehicleChassis myChassis = new VehicleChassis();
-//
-//        VehicleChassis yourChassis = new VehicleChassis("cn");
-//
-//        VehicleFrame myFrame = new VehicleFrame();
-//
-//        VehicleFrame yourFrame = new VehicleFrame("Ladder Frame");
+        VehicleChassis myChassis = new VehicleChassis();
+        System.out.println(myChassis.toString());
 
+        VehicleChassis yourChassis = new VehicleChassis("cn");
+        System.out.println(yourChassis.toString());
+    }
 
-//        System.out.println(myChassis.toString());
-//        System.out.println(yourChassis.toString());
-//
-//        System.out.println(myFrame.toString());
-//        System.out.println(yourFrame.toString());
+    public static void testVehicleFrame() {
+        // Step 4 Test
+        VehicleFrame vf1 = new VehicleFrame();
+        System.out.println(vf1);
 
-        ManufacturedEngine myEngine = new ManufacturedEngine();
+        VehicleFrame vf2 = new VehicleFrame("Ladder Frame");
+        System.out.println(vf2);
+    }
 
-        Date date = new Date(2012, 01, 03, 07,13,19);
+    public static void testManufacturedEngine() {
+        ManufacturedEngine me1 = new ManufacturedEngine();
+        System.out.println(me1);
 
-        ManufacturedEngine yourEngine = new ManufacturedEngine("Honda", date, "H-series",
-                "H23A1", 4, "88 AKI", "2WD: Two-Wheel Drive");
+        ManufacturedEngine me2 =
+                new ManufacturedEngine("Honda", new Date()
+                        , "H-Series", "H23A1"
+                        , "2WD: Two-Wheel Drive", 4
+                        , "88 AKI");
+        System.out.println(me2);
+    }
 
-        System.out.println(myEngine.toString());
-        System.out.println(" ");
-        System.out.println(yourEngine.toString());
-        System.out.println(" ");
+    public static void testFeatures() {
+        InteriorFeature if1 = new InteriorFeature();
+        System.out.println(if1);
 
-        InteriorFeature myIntFeature = new InteriorFeature();
-        InteriorFeature yourIntFeature = new InteriorFeature("Climate Control");
+        InteriorFeature if2 = new InteriorFeature("Climate Control");
+        System.out.println(if2);
 
-        System.out.println(myIntFeature.toString());
-        System.out.println(yourIntFeature.toString());
+        ExteriorFeature ef1 = new ExteriorFeature();
+        System.out.println(ef1);
 
-        ExteriorFeature myExFeature = new ExteriorFeature();
-        ExteriorFeature yourExFeature = new ExteriorFeature("Fog Lamps");
-
-        System.out.println(myExFeature.toString());
-        System.out.println(yourExFeature.toString());
-
-
+        ExteriorFeature ef2 = new ExteriorFeature("Fog Lamps");
+        System.out.println(ef2);
 
     }
 
+    public static void testVehicle() {
+        Vehicle v1 = new Vehicle();
+        System.out.println(v1);
+
+        Vehicle v2 = new Vehicle(new Date(), "Honda", "Prelude", "Coupe",
+                new VehicleChassis("Unibody"),
+                "null", "type",
+                new ManufacturedEngine("Honda", new Date(), "H-series",
+                        "H23A1", "88 AKI", 4, "2WD: Two-Wheel Drive"));
+        System.out.println(v2);
+    }
+
+    public static void testCar() {
+
+        // Test default constructor and print instance attributes.
+        Car c1 = new Car();
+        System.out.println(c1);
+        System.out.println();
+
+        // Seed the features with valid subclasses.
+        Feature[] f = {new InteriorFeature("AM/FM Radio")
+                , new ExteriorFeature("Wood Panels")
+                , new InteriorFeature("Air Conditioning")
+                , new ExteriorFeature("Moonroof")};
+
+        // Create an overloaded Car instance.
+        Car c2 = new Car(new Date(), "Honda", "Prelude", "Coupe",
+                new VehicleChassis("Unibody"),
+                "null", "type",
+                new ManufacturedEngine("Honda", new Date(), "H-series",
+                        "H23A1", "88 AKI", 4, "2WD: Two-Wheel Drive")
+                , f, 2);
+        System.out.println(c2);
+    }
 }
+

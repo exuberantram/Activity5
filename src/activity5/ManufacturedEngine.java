@@ -24,8 +24,8 @@ public class ManufacturedEngine implements Engine {
     }
 
     public ManufacturedEngine(String engineManufacturer, Date engineManufacturedDate,
-                              String engineMake, String engineModel, int engineCylinders,
-                              String engineType, String driveTrain) {
+                              String engineMake, String engineModel, String engineType,
+                              int engineCylinders, String driveTrain) {
         this.engineManufacturer = engineManufacturer;
         this.engineManufacturedDate = engineManufacturedDate;
         this.engineMake = engineMake;
@@ -73,12 +73,12 @@ public class ManufacturedEngine implements Engine {
     public String toString() {
         return
                 "Engine Manufacturer: " + engineManufacturer + "\n" +
-                "Engine Manufactured: " + engineManufacturedDate + "\n" +
-                "Engine Make: " + engineMake + "\n" +
-                "Engine Model: " + engineModel + "\n" +
-                "Engine Type: " + engineType + "\n" +
-                "Engine Cylinders: " + engineCylinders + "\n" +
-                "Drive Train: " + driveTrain;
+                        "Engine Manufactured: " + engineManufacturedDate + "\n" +
+                        "Engine Make: " + engineMake + "\n" +
+                        "Engine Model: " + engineModel + "\n" +
+                        "Engine Type: " + engineType + "\n" +
+                        "Engine Cylinders: " + engineCylinders + "\n" +
+                        "Drive Train: " + driveTrain;
 
 
     }

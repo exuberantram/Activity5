@@ -1,6 +1,6 @@
 package activity5;
 
-public class InteriorFeature {
+public class InteriorFeature implements Feature {
 
     private String interiorFeature;
 
