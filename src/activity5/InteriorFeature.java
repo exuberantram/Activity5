@@ -22,6 +22,6 @@ public class InteriorFeature implements Feature {
 
     public String toString() {
         return
-                "Interior [" + interiorFeature + "]";
+                "Interior Feature: [" + interiorFeature + "]";
     }
 }

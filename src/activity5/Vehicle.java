@@ -3,14 +3,14 @@ package activity5;
 import java.util.Date;
 
 public class Vehicle implements Engine, Chassis {
-    private Date vehicleManufacturedDate;
-    private String vehicleManufacturer;
-    private String vehicleMake;
-    private String vehicleModel;
-    private Chassis vehicleFrame;
-    private String vehicleType;
-    private String driveTrain;
-    private Engine vehicleEngine;
+    Date vehicleManufacturedDate;
+    String vehicleManufacturer;
+    String vehicleMake;
+    String vehicleModel;
+    Chassis vehicleFrame;
+    String vehicleType;
+    String driveTrain;
+    Engine vehicleEngine;
 
     public Vehicle() {
         this.vehicleManufacturedDate = new Date();
@@ -24,8 +24,14 @@ public class Vehicle implements Engine, Chassis {
 
     }
 
-    public Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer, String vehicleMake,
-                   String vehicleModel, Chassis vehicleFrame, String vehicleType, String driveTrain, Engine vehicleEngine) {
+    public Vehicle(Date vehicleManufacturedDate,
+                   String vehicleManufacturer,
+                   String vehicleMake,
+                   String vehicleModel,
+                   Chassis vehicleFrame,
+                   String vehicleType,
+                   String driveTrain,
+                   Engine vehicleEngine) {
         this.vehicleManufacturedDate = vehicleManufacturedDate;
         this.vehicleManufacturer = vehicleManufacturer;
         this.vehicleMake = vehicleMake;
@@ -102,11 +108,11 @@ public class Vehicle implements Engine, Chassis {
     }
 
     public Chassis getChassisType() {
-        return this;
+        return null;
     }
 
     public void setChassisType(String VehicleChassis) {
-        vehicleFrame.setChassisType(VehicleChassis);
+        this.vehicleFrame.setChassisType(VehicleChassis);
     }
 
     public void setEngineCylinders(int engineCylinders) {
@@ -118,28 +124,28 @@ public class Vehicle implements Engine, Chassis {
     }
 
     public void setEngineManufacturer(String manufacturer) {
-        vehicleEngine.setEngineManufacturer(manufacturer);
+        this.vehicleEngine.setEngineManufacturer(manufacturer);
     }
 
     public void setEngineMake(String engineMake) {
-        vehicleEngine.setEngineMake(engineMake);
+        this.vehicleEngine.setEngineMake(engineMake);
     }
 
     public void setEngineModel(String engineModel) {
-        vehicleEngine.setEngineModel(engineModel);
+        this.vehicleEngine.setEngineModel(engineModel);
     }
 
     public void setEngineType(String engineType) {
-        vehicleEngine.setEngineType(engineType);
+        this.vehicleEngine.setEngineType(engineType);
     }
 
     public String toString() {
         return
-                "Manufacturer Name: " + vehicleManufacturer + "\n" +
-                        "Manufactured Date: " + vehicleManufacturedDate + "\n" +
-                        "Vehicle Make     : " + vehicleMake + "\n" +
-                        "Vehicle Model    : " + vehicleModel + "\n" +
-                        "Vehicle Type     : " + vehicleType + "\n" +
+                "Manufacturer Name: " + this.vehicleManufacturer + "\n" +
+                        "Manufactured Date: " + this.vehicleManufacturedDate + "\n" +
+                        "Vehicle Make     : " + this.vehicleMake + "\n" +
+                        "Vehicle Model    : " + this.vehicleModel + "\n" +
+                        "Vehicle Type     : " + this.vehicleType + "\n" +
                         vehicleEngine.toString();
     }
 

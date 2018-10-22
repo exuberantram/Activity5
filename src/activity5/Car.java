@@ -16,10 +16,18 @@ public class Car extends Vehicle {
         this.carAxle = 0;
     }
 
-    public Car(Date vehicleManufacturedDate, String vehicleManufacturer, String vehicleMake, String vehicleModel,
-               Chassis vehicleFrame, String vehicleType, String driveTrain, Engine vehicleEngine,
-               Feature[] feature, int carAxle) {
-        super();
+    public Car(Date vehicleManufacturedDate,
+               String vehicleManufacturer,
+               String vehicleMake,
+               String vehicleModel,
+               Chassis vehicleFrame,
+               String vehicleType,
+               String driveTrain,
+               Engine vehicleEngine,
+               Feature[] feature,
+               int carAxle) {
+        super(vehicleManufacturedDate, vehicleManufacturer, vehicleMake
+                , vehicleModel, vehicleFrame, vehicleType, driveTrain, vehicleEngine);
         this.feature = feature;
         this.carAxle = carAxle;
     }
@@ -39,7 +47,7 @@ public class Car extends Vehicle {
             if (f instanceof InteriorFeature)
                 intFeatures += f.toString() + "\n";
         }
-        return "Features : \n" + intFeatures;
+        return "\n" + intFeatures;
     }
 
     public int getCarAxle() {

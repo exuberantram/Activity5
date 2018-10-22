@@ -1,6 +1,7 @@
 package activity5;
 
 public class ExteriorFeature implements Feature {
+
     private String exteriorFeature;
 
     public ExteriorFeature() {
@@ -21,7 +22,7 @@ public class ExteriorFeature implements Feature {
 
     public String toString() {
         return
-                "Exterior [" + exteriorFeature + "]";
+                "Exterior Feature: [" + exteriorFeature + "]";
     }
 }
 

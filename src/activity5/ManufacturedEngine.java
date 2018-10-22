@@ -20,7 +20,7 @@ public class ManufacturedEngine implements Engine {
         this.engineModel = "Generic";
         this.engineType = "85 AKI";
         this.engineCylinders = 0;
-        this.driveTrain = "2WD: Two-Wheel Drives";
+        this.driveTrain = "2WD: Two-Wheel Drive";
     }
 
     public ManufacturedEngine(String engineManufacturer, Date engineManufacturedDate,
